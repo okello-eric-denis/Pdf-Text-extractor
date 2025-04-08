@@ -41,13 +41,13 @@ export default function RootLayout({
             <div className="flex-1 w-full flex flex-col gap-20 items-center">
             <nav className="w-full flex justify-center border-b border-b-foreground/10 h-16 px-4">
                 <div className="max-w-screen-xl flex justify-between items-center w-full p-3 sm:px-6 text-sm">
-                  <div className="flex gap-5 items-center font-semibold">
+                  <div className="flex gap-5 items-center font-semibold text-4xl text-green-300">
                     <Link href={"/"}>Flowspark</Link>
                   </div>
                   {!hasEnvVars ? <EnvVarWarning /> : <HeaderAuth />}
                 </div>
               </nav>
-              <div className="flex flex-col gap-20 w-full max-w-screen-xl px-6">
+              <div className="flex flex-col gap-20 w-full max-w-screen-xl px-6 items-center justify-center">
               {children}
               </div>
 
