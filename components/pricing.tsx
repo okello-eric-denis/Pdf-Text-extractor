@@ -10,7 +10,7 @@ export default function PricingSection() {
       features: ["1 user", "500MB of storage"],
       unavailable: ["Email support", "Help center access", "Phone support", "Community access"],
       cta: "Start for Free",
-      href: "#",
+      href: "/sign-in",
     },
     {
       name: "Starter",
@@ -19,7 +19,7 @@ export default function PricingSection() {
       features: ["5 users", "2GB of storage", "Email support"],
       unavailable: ["Help center access", "Phone support", "Community access"],
       cta: "Choose Starter",
-      href: "#",
+      href: "/sign-in",
     },
     {
       name: "Pro",
@@ -28,16 +28,16 @@ export default function PricingSection() {
       features: ["20 users", "5GB of storage", "Email support", "Help center access"],
       unavailable: ["Phone support", "Community access"],
       cta: "Get Started",
-      href: "#",
+      href: "/sign-in",
     },
     {
       name: "Enterprise",
-      description: "Advanced features and premium support for large teams.",
+      description: "Advanced features and support for large teams.",
       price: "99$",
       features: ["Unlimited users", "50GB of storage", "Email support", "Help center access", "Phone support", "Community access"],
       unavailable: [],
       cta: "Contact Sales",
-      href: "#",
+      href: "/sign-in",
     },
   ];
 
@@ -46,18 +46,18 @@ export default function PricingSection() {
       {plans.map((plan) => (
         <div key={plan.name} className="divide-y divide-gray-200 rounded-2xl border border-gray-200 shadow-xs">
           <div className="p-6 sm:px-8">
-            <h2 className="text-lg font-medium text-900">
+            <h2 className="text-2xl font-medium text-green-200 text-center">
               {plan.name}
               <span className="sr-only">Plan</span>
             </h2>
 
-            <p className="mt-2 text-700">{plan.description}</p>
+            <p className="mt-2 text-700 text-center">{plan.description}</p>
 
-            <p className="mt-2 sm:mt-4">
-              <strong className="text-3xl font-bold text-900 sm:text-4xl">{plan.price}</strong>
+            <p className="mt-2 sm:mt-4 text-center">
+              <strong className="text-2xl font-bold text-900 sm:text-2xl">{plan.price}</strong>
               <span className="text-sm font-medium text-700">/month</span>
             </p>
-            <div className="mt-4 text-center hover:bg-transparent">
+            <div className="mt-4 text-center ">
             <Button
               asChild
               size="sm"
@@ -65,15 +65,9 @@ export default function PricingSection() {
               disabled
               className="opacity-75 cursor-none pointer-events-none"
             >
-              <Link href="/sign-in">{plan.cta}</Link>
+              <Link href={plan.href}>{plan.cta}</Link>
             </Button> 
             </div>
-           {/* <a
-              className="mt-4 block rounded-sm border border-indigo-600 bg-indigo-600 px-12 py-3 text-center text-sm font-medium text-white hover:bg-transparent hover:text-indigo-600 focus:ring-3 focus:outline-hidden sm:mt-6"
-              href={plan.href}
-            >
-              {plan.cta}
-            </a> */}
           </div>
 
           <div className="p-6 sm:px-8">
