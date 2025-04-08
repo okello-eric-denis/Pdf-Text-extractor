@@ -12,7 +12,7 @@ export function SmtpMessage() {
         </small>
         <div>
           <Link
-            href="https://supabase.com/docs/guides/auth/auth-smtp"
+            href="#"
             target="_blank"
             className="text-primary/50 hover:text-primary flex items-center text-sm gap-1"
           >
